@@ -13,7 +13,7 @@
         <h2>Modificación de Datos</h2>
         <div class="grupo">
             <label for="nombre">Nombre</label>
-            <input type="text" oninput="deleteError('nombre')" name="nombre" id="nombre">
+            <input type="text" oninput="deleteError('nombre')" name="nombre" id="nombre" required>
             <div id="nombreHelp" class="form-text text-danger">El nombre es obligatorio</div>
         </div>
         <div class="grupo">
@@ -57,7 +57,7 @@
             <div class="form-text text-danger" id="radioOptionHelp">Debes seleccionar una opción</div>
         </div>
         <div class="grupo">
-            <input type="checkbox" name="infoCheckbox" id="infoCheckbox">
+            <input type="checkbox" name="infoCheckbox" id="infoCheckbox" required>
             <label for="infoCheckbox">Acépto las condiciones</label>
             <div class="form-text text-danger" id="infoCheckboxHelp">Debes aceptar las condiciones</div>
         </div>
