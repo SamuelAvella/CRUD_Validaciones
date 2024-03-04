@@ -1,0 +1,81 @@
+*,
+::before,
+::after {
+    margin: 20px 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #1cefff; 
+    background: -webkit-linear-gradient(to right, #1cefff, #c0c0aa); 
+    background: linear-gradient(to right, #1cefff, #c0c0aa);
+    align-items: center;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.grupo {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+.form-text,
+#nombreHelp,
+#apellidoHelp,
+#DNIHelp,
+#edadHelp,
+#emailHelp,
+#departamentoHelp,
+#radioOptionHelp,
+#infoCheckboxHelp
+{visibility:hidden};
+
+
+button {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width: 800px) {
+    form {
+        width: 90%;
+    }
+}
