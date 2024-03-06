@@ -9,37 +9,37 @@
     <link rel="stylesheet" href="./css/modificacion.css">
 </head>
 <body>
-    <form action="#" method="post" id="form" onsubmit="return validacion()">
+    <form action="#" method="post" id="form">
             <h2>Modificación de Datos</h2>
             <div class="grupo">
                 <label for="nombre">Nombre</label>
-                <input type="text" oninput="deleteError('nombre')" name="nombre" id="nombre" value="Juan" required>
+                <input type="text" onchange="checkField('nombre', 'nombreHelp')" name="nombre" id="nombre" value="Juan">
                 <div id="nombreHelp" class="form-text text-danger">El nombre es obligatorio</div>
             </div>
             <div class="grupo">
                 <label for="apellido">Apellidos</label>
-                <input type="text" oninput="deleteError('apellido')" name="apellido" id="apellido" required value="Pérez">
+                <input type="text" onchange="checkField('apellido', 'apellidoHelp')" name="apellido" id="apellido" value="Pérez">
                 <div class="form-text text-danger" id="apellidoHelp">Mínimo 5 caracteres</div>
             </div>
             <div class="grupo">
                 <label for="DNI">DNI</label>
-                <input type="text" oninput="deleteError('DNI')" name="DNI" id="DNI" required value="12345678A">
+                <input type="text" onchange="checkField('DNI', 'DNIHelp')" name="DNI" id="DNI" value="12345678A">
                 <div class="form-text text-danger" id="DNIHelp">Formato incorrecto</div>
             </div>
             <div class="grupo">
                 <label for="edad">Edad</label>
-                <input type="number" name="edad" id="edad" oninput="deleteError('edad')" required value="25">
+                <input type="number" name="edad" id="edad" oninput="deleteError('edad')" value="25">
                 <div class="form-text text-danger" id="edadHelp">Debes tener entre 18 y 50 años</div>
             </div>            
             <div class="grupo">
                 <label for="email">Correo Electrónico</label>
-                <input type="email" name="email" id="email" oninput="deleteError('email')" required value="juan@example.com">
+                <input type="text" name="email" id="email" onchange="checkField('email', 'emailHelp')" value="juan@example.com">
                 <div class="form-text text-danger" id="emailHelp">Formato de correo electrónico inválido</div>
             </div>
             <div class="grupo">
                 <label for="departamento">Departamento que solicita</label>
-                <select name="departamento" id="departamento" onchange="deleteError('departamento')" required>
-                    <option value="0" disabled>-- departamentos</option>
+                <select name="departamento" id="departamento" onchange="checkField('departamento', 'departamentoHelp')">
+                    <option value="0">-- departamentos</option>
                     <option value="1" selected>Administración</option>
                     <option value="2">Finanzas</option>
                     <option value="3">Comercial</option>
@@ -48,16 +48,16 @@
             </div>
             <div class="grupo">
                 <label>Estudios:</label><br>
-                <input type="radio" name="radioOption" id="radioOption1" value="opcion1" checked>
+                <input type="radio" name="radioOption" id="radioOption1" value="opcion1" checked onchange="checkField('radioOption', 'radioOptionHelp')">
                 <label for="radioOption1">Grado superior</label><br>
-                <input type="radio" name="radioOption" id="radioOption2" value="opcion2">
+                <input type="radio" name="radioOption" id="radioOption2" value="opcion2" onchange="checkField('radioOption', 'radioOptionHelp')">
                 <label for="radioOption2">Estudios universitarios</label><br>
-                <input type="radio" name="radioOption" id="radioOption3" value="opcion3">
+                <input type="radio" name="radioOption" id="radioOption3" value="opcion3" onchange="checkField('radioOption', 'radioOptionHelp')">
                 <label for="radioOption3">Cursos externos</label>
                 <div class="form-text text-danger" id="radioOptionHelp">Debes seleccionar una opción</div>
             </div>
             <div class="grupo">
-                <input type="checkbox" name="infoCheckbox" id="infoCheckbox" checked>
+                <input type="checkbox" name="infoCheckbox" id="infoCheckbox" checked onchange="checkField('infoCheckbox', 'infoCheckboxHelp')">
                 <label for="infoCheckbox">Acépto las condiciones</label>
                 <div class="form-text text-danger" id="infoCheckboxHelp">Debes aceptar las condiciones</div>
             </div>

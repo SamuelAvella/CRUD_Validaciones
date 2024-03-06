@@ -7,3 +7,7 @@ function myFunction() {
     }
     document.getElementById("demo").innerHTML = text;
   }
+
+  function editFunction() {
+    alert("Función de edición activada");
+}
